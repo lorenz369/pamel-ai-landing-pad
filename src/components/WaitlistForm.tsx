@@ -1,8 +1,8 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/lib/supabase";
 
 const WaitlistForm = () => {
   const [email, setEmail] = useState("");
@@ -31,13 +31,13 @@ const WaitlistForm = () => {
     }
 
     setIsLoading(true);
-    console.log("Email submitted:", email);
 
-    // Simulate API call - you'll need to connect this to a backend
     try {
-      // For now, we'll just show a success message
-      // Later, you can connect this to Supabase or another backend service
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const { error } = await supabase
+        .from('waitlist')
+        .insert([{ email }]);
+
+      if (error) throw error;
       
       toast({
         title: "Success!",
