@@ -66,21 +66,18 @@ const WaitlistForm = () => {
             placeholder="Enter your email address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="text-center text-lg py-6 rounded-full border-2 border-gray-200 focus:border-purple-400 transition-colors"
+            className="text-center text-lg py-6 rounded-full border-2 border-gray-200 focus:border-gray-400 transition-colors"
             disabled={isLoading}
           />
         </div>
         <Button 
           type="submit" 
-          className="w-full py-6 text-lg bg-purple-600 hover:bg-purple-700 rounded-full transition-all duration-200 transform hover:scale-105"
+          className="w-full py-6 text-lg bg-black hover:bg-gray-800 text-white rounded-full transition-all duration-200 transform hover:scale-105"
           disabled={isLoading}
         >
           {isLoading ? "Joining..." : "Join the Waitlist"}
         </Button>
       </form>
-      <p className="text-sm text-gray-500 text-center mt-4">
-        Be the first to experience mindful yoga with AI guidance
-      </p>
     </div>
   );
 };

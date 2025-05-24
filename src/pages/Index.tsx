@@ -17,23 +17,13 @@ const Index = () => {
           pamel.ai
         </h1>
         <p className="text-lg text-gray-600 mt-2 font-light">
-          AI-Powered Yoga & Mindfulness
+          AI yoga coach
         </p>
       </header>
 
       {/* Main Content */}
       <main className="flex-1 flex items-center justify-center px-6">
         <div className="text-center space-y-8 max-w-lg">
-          <div className="space-y-4">
-            <h2 className="text-3xl md:text-4xl font-light text-gray-800 leading-tight">
-              Transform Your Practice
-            </h2>
-            <p className="text-xl text-gray-600 font-light">
-              Personalized yoga sessions powered by artificial intelligence. 
-              Coming soon to guide your journey to inner peace.
-            </p>
-          </div>
-          
           <WaitlistForm />
         </div>
       </main>
